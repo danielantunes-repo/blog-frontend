@@ -4,7 +4,6 @@ import { map, Observable, tap } from 'rxjs';
 import { jwtDecode, JwtPayload } from 'jwt-decode';
 import { Login } from './login';
 import { Usuario } from './usuario';
-import { Post } from '../models/post';
 
 @Injectable({
   providedIn: 'root',
@@ -20,8 +19,8 @@ export class LoginService {
       .post<string>(this.API, login, { responseType: 'text' as 'json' })
       .pipe(
         tap((token: string) => {
-          console.log('Token recebido:', token); // Verifique se o token está sendo recebido
-          this.addToken(token); // Armazena o token
+          console.log('Token recebido:', token); 
+          this.addToken(token); 
         })
       );
   }
