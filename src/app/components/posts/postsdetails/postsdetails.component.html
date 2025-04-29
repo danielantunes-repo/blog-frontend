@@ -1,0 +1,17 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{ post?.titulo }}</mat-card-title>
+    <mat-card-subtitle
+      >Criado no dia
+      {{ post?.date | date : "dd/MM/yyyy HH:mm" }}</mat-card-subtitle
+    >
+    <mat-card-subtitle>Autor: {{ post?.autor }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <p>{{ post?.texto }}</p>
+    <mat-divider></mat-divider>
+  </mat-card-content>
+  <mat-card-footer></mat-card-footer>
+</mat-card>

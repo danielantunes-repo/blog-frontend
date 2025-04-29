@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <mat-card appearance="outlined" *ngFor="let post of posts">
+        <mat-card-header>
+          <mat-card-title>{{ post.titulo }}</mat-card-title>
+        </mat-card-header>
+        <br />
+        <mat-divider></mat-divider>
+        <br />
+
+        <mat-card-content>
+          {{ post.texto }}
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-button>Criado por {{ post.autor.name }}</button>
+          <div class="spacer"></div>
+
+          <div *ngIf="loginService.getUserId() == post.autor.username">
+            <button mat-button routerLink="/admin/posts/edit/{{ post.id }}">
+              Editar
+            </button>
+            <button mat-button (click)="deleteById(post)">Deletar</button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

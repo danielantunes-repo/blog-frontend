@@ -1,0 +1,32 @@
+<mat-toolbar>
+  <span
+    ><mat-icon>developer_mode</mat-icon
+    ><a
+      href="/admin/posts"
+      style="text-decoration: none; font-size: 30px; color: white"
+    >
+      Blog <span style="color: gray">Montreal</span></a
+    ></span
+  >
+
+  <div class="menu">
+    @for(item of itensMenu; track item){
+    <a mat-button routerLink="{{ item.link }}"
+      ><mat-icon>add</mat-icon> {{ item.label }}</a
+    >}
+    <a mat-button href="admin/posts">Todos os Posts</a>
+
+    @for(item of perfilMenu; track item){
+    <a mat-button routerLink="{{ item.link }}"> {{ item.label }}</a>
+    }
+  </div>
+
+  <div class="spacer"></div>
+  <a
+    mat-raised-button
+    class="button-sair"
+    style="background-color: red"
+    href="login"
+    >Sair</a
+  >
+</mat-toolbar>

@@ -1,0 +1,46 @@
+<mat-card class="card">
+  <mat-card-content>
+    <mat-card-header>
+      <h1>Cadastrar</h1>
+    </mat-card-header>
+    <form [formGroup]="userForm">
+      <mat-form-field class="form" appearance="outline">
+        <mat-label for="Nome">Nome</mat-label>
+        <input matInput formControlName="name" placeholder="Digite seu nome" />
+      </mat-form-field>
+
+      <mat-form-field class="form" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          formControlName="username"
+          placeholder="Digite seu email"
+          type="email"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="form" appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          placeholder="Digite sua senha"
+          type="password"
+        />
+      </mat-form-field>
+
+      <mat-card-actions>
+        <button mat-flat-button (click)="goToLogin()">Voltar</button>
+        <div class="spacer"></div>
+        <button
+          mat-flat-button
+          color="primary"
+          type="submit"
+          (click)="createPost()"
+        >
+          Cadastrar
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card-content>
+</mat-card>
