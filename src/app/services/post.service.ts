@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import { Post } from '../models/post';
 import { Observable } from 'rxjs';
 import { LoginService } from '../auth/login.service';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PostService {
-  API = 'http://localhost:8080/api/post';
+  API = environment.SERVIDOR+'/api/post';
 
   constructor(private http: HttpClient, private loginService: LoginService) {}
 

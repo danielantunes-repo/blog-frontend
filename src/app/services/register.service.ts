@@ -2,12 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Usuario } from '../auth/usuario';
 import { catchError, Observable, throwError } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class RegisterService {
-  API = 'http://localhost:8080/api';
+  API = environment.SERVIDOR+'/api';
 
   constructor(private http: HttpClient) {}
 
