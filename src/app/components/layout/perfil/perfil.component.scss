@@ -36,6 +36,12 @@ mat-card-content h3{
 }
 
 .container {
-    display: flex;
+    height: calc(100vh - 110px);
     
+}
+
+@media (max-width: 768px) {
+   .card-id {
+    display: none !important;
+   }
 }

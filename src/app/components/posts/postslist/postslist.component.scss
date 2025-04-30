@@ -1,15 +1,16 @@
 .container {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     margin: auto;
     margin-top: 70px;
+    margin-bottom: 100px;
 }
 
 mat-card {
     margin-top: 20px;
     padding: 20px;
     max-width: 800px;
-    word-wrap: break-word;
+    // word-wrap: break-word;
     
 }
 
@@ -20,5 +21,27 @@ mat-card-content {
   }
   
 
+@media (max-width: 769px) {
+    .card-container {
+        max-width: 500px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
 
+@media (max-width: 600px) {
+    .card-container {
+        max-width: 300px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    mat-card-content {
+        max-height: 1200px;
+        height: 100%;
+        white-space: normal; 
+        overflow: visible; 
+        
+      }
+}
 

@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
-import { MenuComponent } from "../menu/menu.component";
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-principal',
-  imports: [MenuComponent, RouterOutlet, ],
+  imports: [
+    RouterOutlet,
+    MatIconModule,
+    MatToolbarModule,
+    MatButtonModule,
+    RouterLink,
+    MatSidenavModule,
+  ],
   templateUrl: './principal.component.html',
-  styleUrl: './principal.component.scss'
+  styleUrl: './principal.component.scss',
 })
-export class PrincipalComponent {
-
-}
+export class PrincipalComponent {}

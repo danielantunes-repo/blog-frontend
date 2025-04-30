@@ -1,3 +1,62 @@
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    (click)="sidenav.toggle()"
+    class="menu-icon b-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a routerLink="/admin/posts" class="menuTitle">Blog Montreal</a>
+  <a mat-button class="top-menu-item" routerLink="posts/new">Criar Post</a>
+  <a mat-button class="top-menu-item" routerLink="/admin/posts">Posts</a>
+  <a mat-button class="top-menu-item" routerLink="perfil">DashBoard</a>
+  <span class="example-spacer"></span>
+  <button
+    mat-icon-button
+    class="b-icon"
+    routerLink="/login"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
 
-<app-menu></app-menu>
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="60" mode="side">
+    <div class="side-nav-items">
+      <div>
+        <a
+          (click)="sidenav.close()"
+          mat-button
+          class="side-menu-item"
+          routerLink="posts/new"
+          ><mat-icon>add</mat-icon>Criar Post</a
+        >
+      </div>
+
+      <div>
+        <a
+          (click)="sidenav.close()"
+          mat-button
+          class="side-menu-item"
+          routerLink="/admin/posts"
+          >Todos os Posts</a
+        >
+      </div>
+
+      <div>
+        <a
+          (click)="sidenav.close()"
+          mat-button
+          class="side-menu-item"
+          routerLink="perfil"
+          >DashBoard</a
+        >
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
