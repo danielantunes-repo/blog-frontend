@@ -51,18 +51,21 @@ Siga as instruções abaixo para rodar o projeto localmente:
   ```bash
   git clone <URL_DO_REPOSITORIO>
   cd <NOME_DO_REPOSITORIO> 
-
+```
 ### 3. Instale as Dependências
 ```bash
  npm install
+```
 
 
 ### 4. Execute o Servidor de Desenvolvimento
 ```bash
  ng serve
+````
 
 ### 5. Acesse o Projeto
 http://localhost:4200
+
 
 
 
