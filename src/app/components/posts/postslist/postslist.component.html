@@ -4,6 +4,8 @@
       <mat-card appearance="outlined" class="card-container" *ngFor="let post of posts">
         <mat-card-header>
           <mat-card-title>{{ post.titulo }}</mat-card-title>
+          <mat-card-subtitle style="color: gray;">{{ post.date | date: 'yyyy-MM-dd HH:mm:ss' }}</mat-card-subtitle>
+
         </mat-card-header>
         <br />
         <mat-divider></mat-divider>
