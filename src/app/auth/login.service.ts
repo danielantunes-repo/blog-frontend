@@ -11,7 +11,8 @@ import { environment } from '../../environments/environment';
 })
 export class LoginService {
   http = inject(HttpClient);
-  API = environment.SERVIDOR+'/api/login';
+  // API = environment.SERVIDOR+'/api/login';
+  API = 'https://blog-backend-montreal.up.railway.app'+'/api/login'
 
   constructor() {}
 

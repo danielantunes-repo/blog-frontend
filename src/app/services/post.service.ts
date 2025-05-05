@@ -9,7 +9,8 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class PostService {
-  API = environment.SERVIDOR+'/api/post';
+  // API = environment.SERVIDOR+'/api/post';
+  API = 'https://blog-backend-montreal.up.railway.app'+'/api/post'
 
   constructor(private http: HttpClient, private loginService: LoginService) {}
 

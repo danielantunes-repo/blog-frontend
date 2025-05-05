@@ -8,7 +8,8 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class RegisterService {
-  API = environment.SERVIDOR+'/api';
+  // API = environment.SERVIDOR+'/api';
+  API = 'https://blog-backend-montreal.up.railway.app'+'/api'
 
   constructor(private http: HttpClient) {}
 
