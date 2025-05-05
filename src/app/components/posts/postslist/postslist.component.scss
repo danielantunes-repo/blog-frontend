@@ -16,7 +16,7 @@ mat-card {
 
 mat-card-content {
     max-height: 15em;
-    overflow: hidden;
+    overflow: visible;
     text-overflow: ellipsis
   }
   
