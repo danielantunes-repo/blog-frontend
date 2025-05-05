@@ -43,8 +43,9 @@ Siga as instruções abaixo para rodar o projeto localmente:
 ### 1. Pré-requisitos
 - **Node.js** e **npm** instalados.
 - **Angular CLI** instalada globalmente:
-  ```bash
+```bash
   npm install -g @angular/cli
+```
 
 ### 2. Clone o Repositório
 **Angular CLI** instalada globalmente:
