@@ -1,59 +1,82 @@
-# Frontend
+# Blog Pessoal - Aplicação Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+## Descrição do Projeto
+Este é um projeto de Blog Pessoal desenvolvido com Angular, com funcionalidades de CRUD para postagens e autenticação de usuários. O backend é uma API hospedada no Railway, enquanto o frontend está implementado em Angular e hospedado na Vercel. 
 
-## Development server
+O objetivo principal é fornecer uma plataforma simples e funcional para criação, edição e gerenciamento de postagens de blog, onde cada usuário gerencia apenas os conteúdos que cria.
 
-To start a local development server, run:
+---
 
+## Funcionalidades
+- **CRUD de Postagens**:
+  - Criar, visualizar, editar e excluir postagens.
+  - Cada postagem inclui:
+    - Título
+    - Conteúdo
+    - Autor
+    - Data
+  - **Regra de Autoria**: Apenas o autor de uma postagem pode editá-la ou excluí-la.
+
+- **Autenticação de Usuários**:
+  - Cadastro de novos usuários.
+  - Login seguro para acessar as funcionalidades.
+
+---
+
+## Tecnologias Utilizadas
+### **Frontend**
+- **Angular**: Framework principal para desenvolvimento do frontend.
+
+### **Backend**
+- API RESTful hospedada no Railway:
+  - **URL**: [blog-backend-montreal.up.railway.app](https://blog-backend-montreal.up.railway.app)
+
+### **Hospedagem**
+- **Frontend**: [Vercel](https://blog-montreal.vercel.app/)
+
+---
+
+## Instalação e Execução
+
+Siga as instruções abaixo para rodar o projeto localmente:
+
+### 1. Pré-requisitos
+- **Node.js** e **npm** instalados.
+- **Angular CLI** instalada globalmente:
 ```bash
-ng serve
+  npm install -g @angular/cli
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### 2. Clone o Repositório
+**Angular CLI** instalada globalmente:
+  ```bash
+  git clone <URL_DO_REPOSITORIO>
+  cd <NOME_DO_REPOSITORIO> 
+```
+### 3. Instale as Dependências
 ```bash
-ng generate component component-name
+ npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
+### 4. Execute o Servidor de Desenvolvimento
 ```bash
-ng generate --help
-```
+ ng serve
+````
 
-## Building
+### 5. Acesse o Projeto
+http://localhost:4200
 
-To build the project run:
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
-```bash
-ng test
-```
 
-## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
 
-```bash
-ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
