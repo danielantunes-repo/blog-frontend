@@ -1,12 +1,17 @@
 <div class="container">
   <div class="row">
+    <div class="background-animation">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
     <mat-card class="card">
       <mat-card-content>
         <mat-card-header>
-          <h1>Criar Post</h1>
+          <mat-card-title>Criar Post</mat-card-title>
         </mat-card-header>
         <form [formGroup]="postForm">
-          <mat-form-field class="form" appearance="outline">
+          <mat-form-field class="form" appearance="outline" class="input-group">
             <mat-label for="Nome">Titulo</mat-label>
             <input
               matInput
@@ -14,8 +19,8 @@
               placeholder="Digite o titulo ..."
             />
           </mat-form-field>
-    
-          <mat-form-field class="form" appearance="outline">
+
+          <mat-form-field class="form" appearance="outline" class="input-group">
             <mat-label>Texto</mat-label>
             <textarea
               matInput
@@ -24,7 +29,7 @@
               type="texto"
             ></textarea>
           </mat-form-field>
-    
+
           <mat-card-actions>
             <button mat-flat-button (click)="goToposts()">Voltar</button>
             <div class="spacer"></div>
@@ -40,7 +45,5 @@
         </form>
       </mat-card-content>
     </mat-card>
-    
   </div>
 </div>
-

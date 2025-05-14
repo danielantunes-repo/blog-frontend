@@ -1,14 +1,20 @@
 <div class="container">
   <div class="row">
+    <div class="background-animation">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
     <mat-card class="card" appearance="outlined">
       <mat-card-header>
         <mat-card-title>Login</mat-card-title>
       </mat-card-header>
-      <mat-form-field appearance="outline" class="full-width">
+      <mat-form-field appearance="outline" class="input-group">
         <mat-label for="usuario">Usuário</mat-label>
         <input matInput type="text" id="usuario" [(ngModel)]="login.username" />
+        <span class="focus-border"></span>
       </mat-form-field>
-      <mat-form-field appearance="outline" class="full-width">
+      <mat-form-field appearance="outline" class="input-group">
         <mat-label for="senha">Senha</mat-label>
         <input
           matInput
@@ -16,6 +22,7 @@
           id="senha"
           [(ngModel)]="login.password"
         />
+        <span class="focus-border"></span>
       </mat-form-field>
 
       <mat-card-actions>
@@ -28,3 +35,4 @@
     </mat-card>
   </div>
 </div>
+<!-- </div> -->

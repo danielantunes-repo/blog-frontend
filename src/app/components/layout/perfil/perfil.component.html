@@ -1,48 +1,81 @@
-<div class="container">
-  <div class="row">
-    <mat-card class="card">
-      <mat-card-content>
-        <h1>Total de Postagens</h1> 
-        <h3>{{ totalPosts }}</h3>
-      </mat-card-content>
-    </mat-card>
-    
-    
-    <mat-card class="table-card">
-      <mat-card-content>
-        <table mat-table [dataSource]="postCountData" class="mat-elevation-z8 demo-table">
-          <!-- ID do Usuário -->
-           
-          <ng-container matColumnDef="id" >
-            <th mat-header-cell *matHeaderCellDef class="card-id"> ID do Usuário </th>
-            <td mat-cell *matCellDef="let item" class="card-id"> {{ item[0] }} </td>
-          </ng-container>
-    
-          <!-- Contagem de Posts -->
-          <ng-container matColumnDef="count" class="card-name">
-            <th mat-header-cell *matHeaderCellDef class="card-id"> Nome do Usuário </th>
-            <td mat-cell *matCellDef="let item" class="card-id"> {{ item[1] }} </td>
-          </ng-container>
-    
-          <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef> Email do Usuário</th>
-            <td mat-cell *matCellDef="let item"> {{ item[2] }} </td>
-          </ng-container>
-    
-          <ng-container matColumnDef="username">
-            <th mat-header-cell *matHeaderCellDef> Contagem de Posts </th>
-            <td mat-cell *matCellDef="let item"> {{ item[3] }} </td>
-          </ng-container>
-    
-          <!-- Cabeçalho e Linhas -->
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-        </table>
-      </mat-card-content>
-    </mat-card>
+<div class="body">
+  <div class="container">
+    <div class="container-superior">
+      <mat-card class="card">
+        <mat-card-content>
+          <h1>Total de Postagens</h1>
+          <h3>{{ totalPosts }}</h3>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
+
+  <div class="container-2">
+    <div class="container-esquerdo">
+      <mat-card class="table-card">
+        <mat-card-content>
+          <table
+            mat-table
+            [dataSource]="postCountData"
+            class="mat-elevation-z8 demo-table"
+          >
+            <!-- ID do Usuário -->
+
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef class="card-id">
+                ID do Usuário
+              </th>
+              <td mat-cell *matCellDef="let item" class="card-id">
+                {{ item[0] }}
+              </td>
+            </ng-container>
+
+            <!-- Contagem de Posts -->
+            <ng-container matColumnDef="count" class="card-name">
+              <th mat-header-cell *matHeaderCellDef class="card-id">
+                Nome do Usuário
+              </th>
+              <td mat-cell *matCellDef="let item" class="card-id">
+                {{ item[1] }}
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef>Email do Usuário</th>
+              <td mat-cell *matCellDef="let item">{{ item[2] }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="username">
+              <th mat-header-cell *matHeaderCellDef>Contagem de Posts</th>
+              <td mat-cell *matCellDef="let item">{{ item[3] }}</td>
+            </ng-container>
+
+            <!-- Cabeçalho e Linhas -->
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="container-direito">
+      <h2 style="text-align: center; color: #333; margin-bottom: 15px">
+        Top 10 Usuários por Quantidade de Posts
+      </h2>
+      <div style="display: block; width: 100%; height: 400px">
+        <canvas
+          baseChart
+          [data]="lineChartData"
+          [options]="lineChartOptions"
+          [type]="lineChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"
+        >
+        </canvas>
+      </div>
+      <div *ngIf="isLoading" style="text-align: center; padding: 20px">
+        Carregando dados do gráfico...
+      </div>
+    </div>
   </div>
-  
-
-
-
+</div>

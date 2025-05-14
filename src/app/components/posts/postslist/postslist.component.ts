@@ -55,7 +55,9 @@ export class PostslistComponent implements OnInit {
 
   loadPost(): void {
     this.postService.getAllPosts().subscribe((data: Post[]) => {
-      this.posts = data;
+      this.posts = data.sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      );
     });
   }
 

@@ -1,47 +1,52 @@
 .container {
-    width: 100%;
-    max-width: 700px;
-    margin: auto;
-    margin-top: 70px;
-    margin-bottom: 100px;
+  width: 100%;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.row {
+  width: 80%;
+  margin: auto;
 }
 
 mat-card {
-    margin-top: 20px;
-    padding: 20px;
-    max-width: 800px;
-    // word-wrap: break-word;
-    
+  margin-bottom: 20px !important;
+  padding: 20px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  // word-wrap: break-word;
 }
 
 mat-card-content {
-    max-height: 15em;
-    overflow: visible;
-    text-overflow: ellipsis
-  }
-  
+  max-height: 15em;
+
+  margin-bottom: 20px;
+  overflow: visible;
+  text-overflow: ellipsis;
+}
 
 @media (max-width: 769px) {
-    .card-container {
-        max-width: 500px;
-        margin: auto;
-        margin-bottom: 20px;
-    }
+  .card-container {
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 600px) {
-    .card-container {
-        max-width: 300px;
-        margin: auto;
-        margin-bottom: 20px;
-    }
+  .card-container {
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
 
-    mat-card-content {
-        max-height: 1200px;
-        height: 100%;
-        white-space: normal; 
-        overflow: visible; 
-        
-      }
+  mat-card-content {
+    max-height: 1200px;
+    height: 100%;
+    white-space: normal;
+    overflow: visible;
+  }
 }
-
