@@ -1,20 +1,84 @@
-.card {
-    max-width: 800px;
-    top: 10vh;
-    margin: auto;
-    padding: 10px;
-  }
-  
-  mat-card-title {
-    margin-bottom: 20px;
-    color: #006;
-    text-align: center;
-  }
-  
-.form {
-    width: 100%;
+.background-animation .circle {
+  position: absolute;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  border-radius: 50%;
+  animation: float 8s infinite;
+  filter: blur(60px);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.circle:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: -50px;
+}
+
+.circle:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  bottom: -30px;
+  right: -30px;
+  animation-delay: 2s;
+}
+
+.circle:nth-child(3) {
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  animation-delay: 4s;
 }
 
 .container {
-  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 88vh;
+  overflow: hidden;
+}
+
+.row {
+  position: relative;
+  width: 800px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none;
+}
+
+.card mat-card-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.form {
+  width: 100%;
+}
+
+.input-group {
+  position: relative;
+  margin: 25px 0;
+  width: 100%;
+}
+
+mat-label {
+  color: white;
+}
+
+textarea,
+input {
+  background-color: transparent !important;
+  color: white !important;
 }

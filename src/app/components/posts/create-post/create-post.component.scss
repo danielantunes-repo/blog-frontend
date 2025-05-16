@@ -1,29 +1,11 @@
-// .card {
-//     max-width: 400px;
-//     top: 20vh;
-//     margin: auto;
-//     padding: 10px;
-//   }
-
-//   mat-card-title {
-//     margin-bottom: 20px;
-//     color: #006;
-//     text-align: center;
-//   }
-
-// .form {
-//     width: 100%;
-// }
-
-// .container {
-//   height: calc(100vh - 60px);
-
-// }
-
 mat-card {
   background-color: transparent !important;
   box-shadow: none !important;
   border: none;
+}
+
+.form {
+  width: 100%;
 }
 
 .background-animation .circle {
@@ -63,30 +45,19 @@ mat-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  // background: #000000;
+  min-height: 88vh;
   overflow: hidden;
 }
 
 .row {
   position: relative;
-  width: 380px;
+  width: 800px;
   padding: 40px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(180deg);
-  }
 }
 
 .card mat-card-title {

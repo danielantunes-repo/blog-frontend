@@ -8,7 +8,7 @@ mat-sidenav-content {
 }
 
 .mat-toolbar {
-  height: 60px;
+  height: 7vh;
   background-color: black;
 }
 
@@ -38,6 +38,38 @@ mat-sidenav-content {
   margin-right: 20px;
   text-decoration: none;
   color: white;
+}
+
+footer {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem; /* py-4 */
+  padding-bottom: 1rem;
+  width: 100%;
+  height: 5vh;
+}
+
+.footer {
+  // max-width: 1280px;
+  padding-left: 1rem; /* px-4 → 1rem */
+  padding-right: 1rem;
+  text-align: center; /* text-center */
+  font-size: 0.875rem; /* text-sm = 14px */
+  color: #6b7280; /* text-muted-foreground (exemplo do Tailwind Gray 500) */
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .footer-content {
+    padding-left: 1.5rem; /* sm:px-6 → 1.5rem */
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-content {
+    padding-left: 2rem; /* lg:px-8 → 2rem */
+    padding-right: 2rem;
+  }
 }
 
 @media (min-width: 900px) {

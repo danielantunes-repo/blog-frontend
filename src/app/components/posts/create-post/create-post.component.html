@@ -13,21 +13,12 @@
         <form [formGroup]="postForm">
           <mat-form-field class="form" appearance="outline" class="input-group">
             <mat-label for="Nome">Titulo</mat-label>
-            <input
-              matInput
-              formControlName="titulo"
-              placeholder="Digite o titulo ..."
-            />
+            <input matInput formControlName="titulo" />
           </mat-form-field>
 
           <mat-form-field class="form" appearance="outline" class="input-group">
             <mat-label>Texto</mat-label>
-            <textarea
-              matInput
-              formControlName="texto"
-              placeholder="Digite seu texto ..."
-              type="texto"
-            ></textarea>
+            <textarea matInput formControlName="texto" type="texto"></textarea>
           </mat-form-field>
 
           <mat-card-actions>
